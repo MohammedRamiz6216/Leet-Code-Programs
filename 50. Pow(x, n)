@@ -1,0 +1,19 @@
+class Solution {
+public:
+    double myPow(double x, int n) {
+       double pow=1;
+       unsigned int k=abs(n);
+       if(n==0) return 1;
+       if(x==1.0) return x;
+       while(k>0)
+        {
+            
+            if(k%2){ pow=pow*x; k--;}
+            else{ x=x*x; k=k/2;}
+        }
+       if(n<0){
+           return 1/pow;
+       }return pow;
+        
+    }
+};
